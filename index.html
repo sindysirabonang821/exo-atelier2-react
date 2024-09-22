@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.development.js" crossorigin></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="dive"></div>
+    <script type="text/babel">
+        function App(){
+        const [count, setCount] = React.useState(0);
+
+        const incrementation = () => {
+    setCount(count + 1);
+};
+
+const decrementation = () => {
+    setCount(count - 1);
+};
+return (
+    <div>
+        <h1>Compteur: {count}</h1>
+        <button onClick={incrementation} >Incrémenter</button>
+        <button onClick={decrementation}>Décrémenter</button>
+    </div>
+);
+        }
+        ReactDOM.render(<App />, document.getElementById('dive'));
+
+    </script>
+</body>
+</html>
